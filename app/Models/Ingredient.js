@@ -8,6 +8,6 @@ export default class Ingredient {
     }
 
     get Template() {
-        return `<li>${this.name} <i class="fas fa-backspace ml-2 text-danger on-hoover" onclick="app.ingredientsController.deleteIngredient('${this.id}')"></i></li>`
+        return `<div><input class="itemsChecked" name="itemCheckBox" type="checkbox"> ${this.name} <i class="fas fa-backspace ml-2 text-danger on-hoover" onclick="app.ingredientsController.deleteIngredient('${this.id}')"></i></div>`
     }
 }

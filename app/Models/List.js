@@ -19,7 +19,7 @@ export default class List {
                     <h4 class="">${this.name}</h4>
                     </div>
                     <div>
-                    <span>0</span>/<span>0</span>
+                    <span id="itemChecked">0</span>/<span id="numbItems">0</span>
                     </div>
                     
                 </div>
@@ -30,7 +30,6 @@ export default class List {
 
           <div class="p-3 card-height">
              
-            <input type="checkbox" id="coding" name="interest" value="coding">
             ${this.Ingredients}
                   
           </div>

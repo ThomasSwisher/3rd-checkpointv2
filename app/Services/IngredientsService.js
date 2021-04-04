@@ -12,8 +12,16 @@ class IngredientsService {
         ProxyState.ingredients.push(new Ingredient(newIng.name, newIng.pizzaId))
         saveState()
         ProxyState.ingredients = ProxyState.ingredients
+        document.getElementById("numbItems").innerHTML = ProxyState.ingredients.length
     }
+
 }
+
+document.querySelectorAll('input[name="itemCheckBox"]').click(function () {
+    let checkBoxCount = document.querySelectorAll('input[name="itemCheckBox"]:checked');
+    document.getElementById("itemChecked").innerHTML = checkBoxCount.length
+    console.log(checkBoxCount)
+})
 
 export const ingredientsService = new IngredientsService();
 
