@@ -1,10 +1,9 @@
 import { ProxyState } from "../AppState.js";
 import { listsService } from "../Services/ListsService.js";
-// TODO --------------------
-//import { loadState } from "../Utils/LocalStorage.js";
+import { loadState } from "../Utils/LocalStorage.js";
 
 
-// NOTE ======== DRAWING "NO TAKS" WHEN NO TASKS LISTED ==============
+// NOTE ======== DRAWING "NO TASKS" WHEN NO TASKS LISTED ==============
 function _draw() {
   let lists = ProxyState.lists;
   let template = ''
@@ -18,12 +17,9 @@ function _draw() {
 //Public
 export default class ListsController {
   constructor() {
-
     ProxyState.on("lists", _draw);
-
-    // TODO this will be where the tasks will come into play---------------
     ProxyState.on("ingredients", _draw);
-    //loadState()
+    loadState()
     _draw()
   }
 

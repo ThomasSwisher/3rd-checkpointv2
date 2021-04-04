@@ -1,19 +1,16 @@
 import { ProxyState } from "../AppState.js";
 import Ingredient from "../Models/Ingredient.js";
-// TODO ====================LOCAL STORAGE=======================
-//import { saveState } from "../Utils/LocalStorage.js";
+import { saveState } from "../Utils/LocalStorage.js";
 
 class IngredientsService {
     deleteIngredient(id) {
         ProxyState.ingredients = ProxyState.ingredients.filter(i => i.id != id)
-        // TODO ====================LOCAL STORAGE=======================
-        //saveState()
+        saveState()
 
     }
     addIngredient(newIng) {
         ProxyState.ingredients.push(new Ingredient(newIng.name, newIng.pizzaId))
-        // TODO ====================LOCAL STORAGE=======================
-        //saveState()
+        saveState()
         ProxyState.ingredients = ProxyState.ingredients
     }
 }

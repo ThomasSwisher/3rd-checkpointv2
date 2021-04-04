@@ -10739,5 +10739,15 @@ h3 {
   cursor: pointer;
 }
 
+.header-styling {
+  font-size: 10rem;
+  font-family: 'Crafty Girls', cursive;
+  color: blueviolet;
+}
+
+.header-card-h {
+  min-height: 7vh;
+}
+
 
 /*# sourceMappingURL=main.css.map */

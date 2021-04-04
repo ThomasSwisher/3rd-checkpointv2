@@ -8,7 +8,6 @@ class AppState extends EventEmitter {
   /** @type {List[]} */
   lists = []
 
-  //  TODO =========================================
   /** @type {Ingredient[]} */
   ingredients = []
 
