@@ -14,7 +14,7 @@ export default class List {
     <div class="col-md-4">
       <div class="pizza-card shadow mb-5 bg-white rounded">
             <div class="header-card-h p-3 ${this.color}">
-                <div class="d-flex justify-content-center flex-direction-column">
+                <div class="d-flex justify-content-center align-header-card">
                     <div>
                     <h4 class="">${this.name}</h4>
                     </div>
@@ -24,7 +24,7 @@ export default class List {
                     
                 </div>
                 <div>
-                <i class="fas fa-times ml-2 on-hoover" onclick="app.listsController.deleteList('${this.id}')"></i>
+                <i class="fas fa-times ml-2 on-hoover delete-position" onclick="app.listsController.deleteList('${this.id}')"></i>
                 </div>
             </div>
 

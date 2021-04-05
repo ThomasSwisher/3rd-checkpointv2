@@ -10749,5 +10749,16 @@ h3 {
   min-height: 7vh;
 }
 
+.align-header-card {
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-position {
+  align-items: self-end;
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 /*# sourceMappingURL=main.css.map */

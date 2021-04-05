@@ -5,6 +5,7 @@ import { saveState } from "../Utils/LocalStorage.js";
 class IngredientsService {
     deleteIngredient(id) {
         ProxyState.ingredients = ProxyState.ingredients.filter(i => i.id != id)
+        window.confirm("Confirm Delete Item")
         saveState()
 
     }
@@ -15,13 +16,14 @@ class IngredientsService {
         document.getElementById("numbItems").innerHTML = ProxyState.ingredients.length
     }
 
+
 }
 
-document.querySelectorAll('input[name="itemCheckBox"]').click(function () {
-    let checkBoxCount = document.querySelectorAll('input[name="itemCheckBox"]:checked');
-    document.getElementById("itemChecked").innerHTML = checkBoxCount.length
-    console.log(checkBoxCount)
-})
+// document.querySelectorAll('input[name="itemCheckBox"]').click(function () {
+//     let checkBoxCount = document.querySelectorAll('input[name="itemCheckBox"]:checked');
+//     document.getElementById("itemChecked").innerHTML = checkBoxCount.length
+//     console.log(checkBoxCount)
+// })
 
 export const ingredientsService = new IngredientsService();
 

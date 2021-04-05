@@ -2,7 +2,7 @@ import { ProxyState } from "../AppState.js";
 import Ingredient from "../Models/Ingredient.js";
 import List from "../Models/List.js";
 
-localStorage.clear()
+//localStorage.clear()
 
 export function saveState() {
     localStorage.setItem('pizzashack', JSON.stringify({
