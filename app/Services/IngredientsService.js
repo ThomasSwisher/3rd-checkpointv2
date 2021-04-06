@@ -5,7 +5,6 @@ import { saveState } from "../Utils/LocalStorage.js";
 class IngredientsService {
     deleteIngredient(id) {
         ProxyState.ingredients = ProxyState.ingredients.filter(i => i.id != id)
-        window.confirm("Confirm Delete Item")
         saveState()
 
     }
@@ -15,15 +14,30 @@ class IngredientsService {
         ProxyState.ingredients = ProxyState.ingredients
         document.getElementById("numbItems").innerHTML = ProxyState.ingredients.length
     }
+    completedTask(id) {
+        let foundTask = ProxyState.ingredients.find(i => i.id == id)
+        foundTask.taskCompleted = true
+
+        let totalCompleted = 0
+        for (let i = 0; i < ProxyState.ingredients.length; i++) {
+            const ingredient = ProxyState.ingredients[i];
+            if (ingredient.taskCompleted) {
+                totalCompleted++
+            } else {
+
+            }
+        }
+        document.getElementById("itemChecked").innerHTML = totalCompleted
+    }
 
 
 }
 
-// document.querySelectorAll('input[name="itemCheckBox"]').click(function () {
-//     let checkBoxCount = document.querySelectorAll('input[name="itemCheckBox"]:checked');
-//     document.getElementById("itemChecked").innerHTML = checkBoxCount.length
-//     console.log(checkBoxCount)
-// })
+
+
+
+
+
 
 export const ingredientsService = new IngredientsService();
 

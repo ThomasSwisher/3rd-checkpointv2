@@ -5,8 +5,8 @@ import { saveState } from "../Utils/LocalStorage.js";
 class ListsService {
     deleteList(id) {
         ProxyState.lists = ProxyState.lists.filter(l => l.id != id)
-        window.confirm("Confirm Delete Item")
         saveState()
+
     }
 
     addList(newList) {

@@ -5,7 +5,6 @@ import { ingredientsService } from "../Services/IngredientsService.js";
 export default class IngredientsController {
 
     addIngredient(pizzaId) {
-        window.event.preventDefault()
         let form = window.event.target
         let rawIng = {
             name: form['name'].value,
@@ -17,7 +16,14 @@ export default class IngredientsController {
     }
 
     deleteIngredient(id) {
-        ingredientsService.deleteIngredient(id)
+        //let prompt = window.confirm("Confirm Delete Item I");
+        if (window.confirm("Confirm Delete Item I")) {
+            ingredientsService.deleteIngredient(id)
+        }
+    }
+    completedTask(id) {
+        ingredientsService.completedTask(id)
+
     }
 
 }

@@ -37,7 +37,15 @@ export default class ListsController {
     form.reset()
   }
 
+
   deleteList(id) {
-    listsService.deleteList(id)
+    let prompt = window.confirm("Confirm Delete Item I");
+    if (prompt) {
+      listsService.deleteList(id)
+    }
   }
+
 }
+
+
+
